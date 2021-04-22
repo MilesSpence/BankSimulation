@@ -1,8 +1,7 @@
 /*   Name: Miles Spence
-
-     Pledge: I hereby declare upon my word of honor that I have neither given nor received unauthorized help on this work.
-
-     Program Description: This is the main file for the project. It will be what actually runs the code and calls the functions/methods that have been created in the header and cpp files. This is where input will be given from a file and outputted.
+     Program Description: This is the main file for the project. 
+     It will be what actually runs the code and calls the functions/methods that have been created in the header and cpp files. 
+     This is where input will be given from a file and outputted.
 */
 #include <iostream>
 #include <queue>
@@ -28,9 +27,7 @@ int main() {
     if(myfile.is_open()) {
         while (getline (myfile,line)) {
             Customer temp(line);
-            //Customer temp("test", 1, 1);
             customers.push(temp);
-            //cout << "worked" << endl;
             numCusts++;
         }
         myfile.close();
@@ -56,31 +53,25 @@ int main() {
         Customer temp = customers.front();
         if(i == temp.GetArrivalTime()) {
             waiting.push(temp);
-            //beingServed = waiting.front();
             customers.pop();
             cout << temp.GetName() << " got in line at " << convertToMilitary(i) <<  "." << endl;
         }
         if(available && !waiting.empty()) {
             beingServed = waiting.front();
-            //cout << serving << endl;
             serving++;
             timeNeeded = beingServed.GetServiceTime();
-            //cout << beingServed.GetServiceTime() << endl;
             if(!waiting.empty()) {
                 waiting.pop();
             }
             available = false;
-            //cout << serving << endl;
         } else if (!available && serving == timeNeeded) {
             cout << beingServed.GetName() << " is done at " << convertToMilitary(i) << "." << endl;
             available = true;
             serving = 0;
             if(!waiting.empty()) {
                 beingServed = waiting.front();
-                //cout << serving << endl;
                 serving++;
                 timeNeeded = beingServed.GetServiceTime();
-                //cout << beingServed.GetServiceTime() << endl;
             if(!waiting.empty()) {
                 waiting.pop();
             }
@@ -90,25 +81,20 @@ int main() {
             serving++;
         }
         if(!waiting.empty() && !available) {
-            //cout << waiting.size() << endl;
             for(int j = 0; j < waiting.size(); j++) {
                 totalWaitTime++;
             }
         }
     }
-        //cout << "test" << endl;
     while(!waiting.empty() || !available) {
         if(available && !waiting.empty()) {
             beingServed = waiting.front();
-            //cout << serving << endl;
             serving++;
             timeNeeded = beingServed.GetServiceTime();
-            //cout << beingServed.GetServiceTime() << endl;
             if(!waiting.empty()) {
                 waiting.pop();
             }
             available = false;
-            //cout << serving << endl;
         } else if (!available && serving == timeNeeded) {
             cout << beingServed.GetName() << " is done at " << convertToMilitary(i) << "." << endl;
             available = true;
@@ -124,7 +110,6 @@ int main() {
             i++;
     }
     avgTime = totalWaitTime/numCusts;
-    //cout << numCusts << " " << totalWaitTime << endl;
     if(totalWaitTime == 0) {
         avgTime = 0;
     }
