@@ -1,5 +1,5 @@
 # BankSimulation
-Project created for class.
+Project created for class with the following instructions...
 ## DESCRIPTION
 For this assignment, you will write a program that simulates a line at a bank. The bank opens at 9 AM and closes at 5 PM. In between, a number of customers arrive throughout the day. Each customer’s business at the bank takes a different amount of time to complete. The bank is small so it only has one teller for all customers. If one customer is at the teller, and others come in, they wait in line in the order they entered.
 
