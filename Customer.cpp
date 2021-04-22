@@ -2,7 +2,7 @@
     Program Description: This is the cpp file for the Customer header file. It creates the constructors, data structures, and actually defines what each function/method does.
     The functions are made up of code which are algorithms and variables to solve problems.
     A Customer is a name, arrival time, and time to be serviced. In addition, there are getter and setters for all of those parameters.
-*/
+*/ 
 #ifndef CUSTOMER_CPP
 #define CUSTOMER_CPP
 
