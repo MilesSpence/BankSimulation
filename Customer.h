@@ -1,8 +1,7 @@
 /*   Name: Miles Spence
-
-     Pledge: I hereby declare upon my word of honor that I have neither given nor received unauthorized help on this work.
-
-     Program Description: This is the header file for the Customer. It creates the Customer class with its #define statements, public function prototypes/signatures, and private data members. This file will be included by the Customer cpp file.
+     Program Description: This is the header file for the Customer. 
+     It creates the Customer class with its #define statements, public function prototypes/signatures, and private data members. 
+     This file will be included by the Customer cpp file.
 */
 #ifndef CUSTOMER_H
 #define CUSTOMER_H
